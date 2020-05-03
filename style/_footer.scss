@@ -1,0 +1,77 @@
+footer {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, color(primary) 0%, color(primary) 50%, color(other) 100%);
+    @include mini-tablet {
+        height: 80vh;
+    }
+    section {
+        margin: auto;
+        text-align: center;
+        &:nth-child(1) {
+            width: 80%;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            color: color(accent);
+            font-family: font(article);
+            h2 {
+                margin-top: 0;
+                font-size: 42px;
+                @include tablet {
+                    font-size: 4.102vw;
+                }
+            }
+            p {
+                font-weight: 600;
+                font-size: 32px;
+                @include tablet {
+                    font-size: 3.125vw;
+                }
+                @include phone {
+                    font-size: 3.865vw;
+                }
+            }
+        }
+        &:nth-child(2) {
+            width: 60%;
+            margin-top: 20px;
+            height: fit-content;
+            text-align: center;
+            padding: 20px 0;
+            color: color(tertiary);
+            border: solid 10px color(tertiary);
+            @include tablet {
+                width: 80%;
+            }
+            @include mini-phone {
+                margin-top: 5px;
+                padding: 5px 0;
+                border-width: 5px;
+            }
+            #clock {
+                font-family: font(clock);
+                font-size: 144px;
+                @include tablet {
+                    font-size: 13.672vw;
+                }
+                span {
+                    margin: 0 40px;
+                }
+            }
+            .github {
+                font-family: font(ui);
+                color: color(tertiary);
+                font-size: 36px;
+                font-weight: 600;
+                text-decoration: none;
+                @include mini-tablet {
+                    font-size: 4.688vw;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

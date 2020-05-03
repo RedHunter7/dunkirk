@@ -1,0 +1,49 @@
+.trivial {
+    background: url("../image/churchill-2800x1440.jpg") center;
+    background-size: cover;
+    height: 100vh;
+    @include tablet {
+        background: url("../image/Sir_Winston_Churchill_-_19086236948.jpg") center;
+        background-size: cover;
+    }
+    @include phone {
+        height: fit-content;
+    }
+    section {
+        background: rgba(color(primary), 0.6 );
+        height: inherit;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        article {
+            width: 80%;
+            color: color(accent);
+            font-family: font(article);
+            @include phone {
+                margin: 9.662vw 0;
+                width: 75%;
+            }
+            h2 {
+                align-self: center;
+                text-align: center;
+                font-size: 48px;
+                margin: 0;
+                @include phone {
+                    font-size: 7.246vw;
+                }
+            }
+            p {
+                font-weight: 600;
+                font-size: 1.5vw;
+                text-align: justify;
+                @include tablet {
+                    font-size: 2.539vw;
+                }
+                @include phone {
+                    font-size: 4.348vw;
+                }
+            }
+        }
+    }
+}

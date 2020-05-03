@@ -1,0 +1,32 @@
+@import "./responsive";
+$colors: (
+    primary: #070C0F,
+    secondary: #8CAFC5,
+    accent: #FFFBFB,
+    tertiary: #DECEDA,
+    other: #2E545C
+);
+
+$fonts: (
+    logo: Berthold Akzidenz Grotesk,
+    ui: Montserrat,
+    article: Bookman Old Style,
+    clock: Berlin Sans FB
+);
+
+$heightNav: (
+    default: 80px,
+    mini-phone: 12.5%
+);
+
+@function heightNav($heightNav-size) {
+    @return map-get($heightNav, $heightNav-size);
+}
+
+@function color($color-name) {
+    @return map-get($colors , $color-name);
+}
+
+@function font($font-name) {
+    @return map-get($fonts, $font-name)
+}

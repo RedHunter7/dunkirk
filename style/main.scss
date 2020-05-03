@@ -1,0 +1,18 @@
+@import "./animation";
+@import "./topnav";
+@import "./header";
+@import "./sidenav";
+@import "./storyline";
+@import "./trivial";
+@import "./trailer";
+@import "./gallery";
+@import "./footer";
+
+html, body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+header , .trivial {
+    background-attachment: fixed;
+}

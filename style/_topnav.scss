@@ -1,0 +1,97 @@
+@import "./variables";
+@import "./responsive";
+
+nav {
+    background: rgba(color(primary), 0.65);
+    position: fixed;
+    top: 0;
+    height: heightNav(default);
+    width: 100%;
+    z-index: 10;
+    border-bottom-left-radius: 1.736vw;
+    border-bottom-right-radius: 1.736vw;
+    @include mini-phone {
+        height: heightNav(mini-phone);
+    }
+    .logo {
+        height: 100%;
+        float: left;
+        margin-left: 20px;
+        display: flex;
+         a {
+             text-decoration: none;
+             font-family: font(logo);
+             font-size: 50px;
+             color: color(secondary);
+             align-items: center;
+             text-align: center;
+             display: inherit;
+
+             @include tablet {
+                 font-size: 40px;
+             }
+             @include mini-phone {
+                 font-size: 11.111vw;
+             }
+         }
+    }
+
+    .menu {
+        float: right;
+        height: inherit;
+        display: flex;
+        a {
+            margin: 20px 30px;
+            font-family: font(ui);
+            color: color(accent);
+            font-size: 30px;
+            text-decoration: none;
+            align-items: center;
+            text-align: center;
+            &:hover {
+                color: color(secondary);
+            }
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+
+    .menuBtn {
+        float: right;
+        display: none;
+        @include tablet {
+            display: flex;
+        }
+        @include mini-phone {
+            height: 100%;
+        }
+        button{
+            margin: 10px 30px;
+            display: block;
+            align-items: center;
+            text-align: center;
+            width: 75px;
+            height: 60px;
+            font-size: 40px;
+            background: transparent;
+            color: color(accent);
+            border: 5px solid;
+            border-color: rgba(color(tertiary), 0.23) ; 
+            border-radius: 15px;
+            box-sizing: border-box;
+            transition: 0.5s;
+            @include phone {
+                margin: 10px;
+            }
+            @include mini-phone {
+                border: 1.389vw solid;
+                border-color: rgba(color(tertiary), 0.23) ; 
+                height: 80%;
+                width: 20.833vw;
+                font-size: 11.111vw;
+                margin: 10% 2.778vw;
+            }
+        }
+    }
+}

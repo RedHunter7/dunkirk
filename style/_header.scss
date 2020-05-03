@@ -1,0 +1,62 @@
+@import "./variables";
+@import "./responsive";
+
+header{
+    background: url("../image/855790.jpg") center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+    .caption {
+        position: absolute;
+        opacity: 80%;
+        width: fit-content;
+        height: fit-content;
+        left: 36px;
+        bottom: 5%;
+        padding: 10px;
+        @include mini-tablet {
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 0;
+        }
+        .movie-tittle {
+            font-family: font(logo);
+            font-size: 96px;
+            color: color(accent);
+            line-height: 80px;
+            @include mini-tablet {
+                line-height: initial;
+                font-size: 14.323vw;
+            }
+        }
+
+        .genre {
+            font-family: font(ui);
+            font-size: 36px;
+            font-weight: bold;
+            color: color(secondary);
+            @include mini-tablet {
+                font-size: 4.688vw;
+                margin-bottom: 10px;
+            }
+        }
+
+        .watch-trailer {
+            font-family: font(ui);
+            font-size: 36px;
+            a {
+                text-decoration: none;
+                color: color(tertiary);
+                font-weight: bold;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            @include mini-tablet {
+                font-size: 4.688vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@import "./variables";
+
+.storyline {
+    background: color(primary);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 
+    "box1 box2";
+    @include tablet {
+        grid-template-columns: 50% 50%;
+    }
+    @include mini-tablet {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "box2"
+        "box1";
+    }
+    section {
+        grid-area: box1;
+        display: flex;
+        align-items: center;
+        @include mini-tablet {
+            align-items: flex-start;
+        }
+        article {
+            margin: 0 15%;
+            color: color(accent);
+            font-family: font(article);
+            @include mini-tablet {
+                margin: 5.208vw 15%;
+            }
+            h2 {
+                font-weight: bold;
+                font-size: 40px;
+                text-align: center;
+                @include mini-tablet {
+                    margin-top: 0;
+                    font-size: 5.208vw;
+                }
+            }
+            p {
+                font-weight: 600;
+                font-size: 1.5vw;
+                text-align: justify;
+                @include tablet {
+                    font-size: 2.344vw;
+                }
+                @include mini-tablet {
+                    font-size: 2.604vw;
+                }
+                @include phone {
+                    font-size: 3.382vw;
+                }
+            }
+        }
+    }
+    aside {
+        grid-area: box2;
+        background: url("../image/1301018.jpg") bottom;
+        background-size: cover;
+    }
+}

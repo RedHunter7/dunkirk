@@ -1,0 +1,53 @@
+@import "./variables";
+@import "./responsive";
+
+.sidenav {
+    display: none;
+    position: fixed;
+    width: 45%;
+    right: 0;
+    top: heightNav(default);
+    bottom: 0;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    z-index: 1;
+    background: rgba(color(primary), 0.65);
+    animation: openNav 0.5s ease-in-out;
+    @include mini-phone {
+        top: heightNav(mini-phone);
+    }
+    a {
+        display: block;
+        color: color(accent);
+        font-family: font(ui);
+        width: 60%;
+        margin: auto;
+        font-size: 4.883vw;
+        text-decoration: none;
+        height: 9.766vw;
+        &:nth-child(1) {
+            margin-top: 40px;
+        }
+        &:hover {
+            color: color(secondary);
+        }
+        @include mini-tablet {
+            font-size: 6.510vw;
+            height: 10.417vw;
+            &:nth-child(1) {
+                margin-top: 30px;
+            }
+        }
+        @include phone {
+            font-size: 30px;
+            height: 60px;
+            &:nth-child(1) {
+                margin-top: 20px;
+            }
+        }
+        @include mini-phone {
+            font-size: 6.944vw;
+            height: 13.889vw;
+        }
+    }
+}
